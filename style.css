@@ -1,5 +1,99 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    background-image: url(./recursos/wallpaper.jpg);
+    background-size: cover;
 }
+body {
+    font-family: Arial, Verdana, sans-serif;
+}
+button{
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+.btn{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: start;
+}
+
+h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+#piezas {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* Creamos una grilla de 3 columnas */
+    width: 615px; /* Aumentamos el ancho del contenedor */
+    margin: auto;
+    justify-content: center;
+    
+}
+
+#puzzle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    
+}
+
+.pieza {
+    width: 205px; 
+    height: 116px; 
+    background-size:cover;
+    margin: 1px; 
+}
+
+.placeholder {
+    background-color: #F2F2F2;
+    outline: 1px solid #333;
+    width: 205px; /* Ajustamos para coincidir con el ancho de cada pieza */
+    height: 116px; /* Ajustamos para coincidir con la altura de cada pieza */
+    transition: 1s;
+}
+
+.placeholder.hover {
+    background-color: orange;
+}
+
+.placeholder .pieza {
+    margin: 0;
+}
+
+#mensaje {
+    color:whitesmoke;
+    text-align: center;
+    display: none;
+}
+
+.ganaste {
+    background-color: #B3D67C;
+}
+
+.ganaste #mensaje {
+    display: block;
+}
+
+.ganaste .placeholder {
+    outline: none;
+}
+
+.ganaste #piezas {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+    
